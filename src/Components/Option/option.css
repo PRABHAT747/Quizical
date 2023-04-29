@@ -1,0 +1,34 @@
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    visibility: hidden;
+    margin: 0;
+  } 
+  input[type="radio"]:checked+.r-option {
+    background-color: blue;
+    color: green;
+  }
+  input[type="radio"]:checked+.select{
+    background-color: pink;
+    color: rgba(0, 53, 245, 0.982);
+  }
+  .w-option{
+    background-color: red;
+    color:white;
+  }
+  .r-option{
+    background-color:green;
+  }
+  .choice{
+    margin: 0;
+    padding: 0;
+  }
+  #onewe{
+    margin: 0;
+    border-radius: 1em;
+    width:max-content;
+    border: 2px solid black;
+    padding :1em ; 
+    text-shadow: 1px 1px black;
+  }
