@@ -1,7 +1,9 @@
 import React from 'react'
 import { nanoid } from 'nanoid'
+import {decode} from 'html-entities';
 import Option from '../Option/Option'
 import './Question.css'
+
 export default function Questions({setData,Setnewgame,data}){  
     
       const Data  = data // 10 queston and option
@@ -94,7 +96,7 @@ export default function Questions({setData,Setnewgame,data}){
             return array
           }
           const QNA = qna.map((nums,index)=>{
-            let quest = Data[index].question
+            let quest = decode(Data[index].question)
             return (
                 <div key = {nanoid()} className='Container'>
                     <div className='Question-container'>
@@ -112,18 +114,18 @@ export default function Questions({setData,Setnewgame,data}){
                 {QNA} 
                 {SubmitAttempt && <p className='warning'>Please Select all Options</p>}
                 { submit && 
-                <p>
-                    Your final Score is {score}
+                <p className='score'>
+                    You scored {score}/10 correct answers
                 </p>
                 }
             <div className='button-container'>
                 <button className='btn' type ='submit' >
-                    Submit
+                    Check Answers
                 </button>
 
                 {submit && 
                 <button  className='btn'  onClick={handleNewGame}>
-                    New Game
+                    Play Again
                 </button>
                 }
                 </div>

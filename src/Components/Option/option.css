@@ -1,34 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+
+.choice{
+  color: #293264;
+  font-weight: 900;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#onewe{
+  margin: 0;
+  border-radius:10px;
+  width:max-content;
+  border: 2px solid rgba(77, 91, 158, 0.7); 
+  padding: 0.5em 2em;
+  text-shadow: .5px .2px black;
+}
 input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     visibility: hidden;
     margin: 0;
-  } 
-  input[type="radio"]:checked+.r-option {
-    background-color: blue;
-    color: green;
-  }
-  input[type="radio"]:checked+.select{
-    background-color: pink;
-    color: rgba(0, 53, 245, 0.982);
-  }
-  .w-option{
-    background-color: red;
-    color:white;
-  }
-  .r-option{
-    background-color:green;
-  }
-  .choice{
-    margin: 0;
-    padding: 0;
-  }
-  #onewe{
-    margin: 0;
-    border-radius: 1em;
-    width:max-content;
-    border: 2px solid black;
-    padding :1em ; 
-    text-shadow: 1px 1px black;
-  }
+} 
+input[type="radio"]:checked+.select{
+  background-color:#D6DBF5;
+  color:#F5F7FB;
+}
+.w-option{
+  background-color:#F8BCBC;
+  color:#F5F7FB !important;
+}
+.r-option{
+  background-color:#94D7A2;
+}
+ 
