@@ -1,4 +1,5 @@
 import React from "react";
+import {decode} from 'html-entities';
 import {nanoid} from 'nanoid'
 import './option.css'
 export default function Option({index,optIndex,handleoption,submit,choice,rightoption,toMatch,empty}){
@@ -25,7 +26,7 @@ export default function Option({index,optIndex,handleoption,submit,choice,righto
                  <div id="onewe" className ={submit && rightoption ? "r-option" :  toMatch[index]===optIndex && submit ? "w-option" : "select" } 
                  //   style = {{backgroundColor : submit &&rightoption ? "green" : toMatch[index]===optIndex ? "red" :  ""}} 
               >
-                 <p className="choice">{choice}</p>
+                 <p className="choice">{decode(choice)}</p>
                  </div>
           </label> 
     )
